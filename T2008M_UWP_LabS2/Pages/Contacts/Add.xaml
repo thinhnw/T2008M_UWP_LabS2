@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="T2008M_UWP_LabS2.Pages.Contacts.Add"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2008M_UWP_LabS2.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <TextBlock 
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignHorizontalCenterWithPanel="True"
+            Margin="0,50,0,0" 
+            Text="ADD CONTACT" 
+            TextWrapping="Wrap" 
+            FontSize="24"
+            Name="Title"
+        />
+        <StackPanel Name="FormGroup_Name" Orientation="Horizontal" RelativePanel.Below="Title" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0">
+            <TextBlock 
+                FontSize="20" 
+                Width="Auto" 
+                Height="35" 
+                Padding="0,0,20,0"
+                HorizontalAlignment="Right">Name</TextBlock>
+            <TextBox Height="35" Width="300" Name="NameInput"/>
+        </StackPanel>
+        <StackPanel Name="FormGroup_Tel" Orientation="Horizontal" RelativePanel.Below="FormGroup_Name" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0">
+            <TextBlock 
+                FontSize="20" 
+                Width="Auto" 
+                Height="35" 
+                Padding="0,0,20,0"
+                HorizontalAlignment="Right">Phone Number</TextBlock>
+            <TextBox Height="35" Width="300" Name="TelInput"/>
+        </StackPanel>
+        <Button 
+            Click="Button_Click"
+            RelativePanel.Below="FormGroup_Tel" Margin="0,20,0,0" RelativePanel.AlignHorizontalCenterWithPanel="true" Width="100">Confirm</Button>
+    </RelativePanel>
+</Page>
